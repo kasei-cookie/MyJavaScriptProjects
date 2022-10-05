@@ -60,3 +60,30 @@ h3 {
 .stopwatch-container h1 {
     color: lightgray;
 }
+
+/*Roll a dice*/
+.dice-title {
+    margin-bottom: 1%;
+}
+
+.dice-player {
+    color: white;
+}
+
+.dice-button {
+    width: 30%;
+    height: 120%;
+    background-color: #F79489;
+}
+
+.dice-button:active, .dice-button:focus {
+    background-color: #F79489;
+}
+
+.dice-button:hover {
+    background-color: #6c757d;
+}
+
+.button-row {
+    margin-top: 3%
+}
