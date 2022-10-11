@@ -8,10 +8,11 @@
 
     <!-- Styles-->
     <link rel="stylesheet" href="styles.css">
+    <title>Guess a color</title>
 
-    <title>Stopwatch</title>
 </head>
 <body>
+
 <!-- Nav Bar -->
 <div class="nav-div">
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -48,28 +49,74 @@
     </nav>
 </div>
 
-<!--Stopwatch-->
 
-<div class="container stopwatch-container">
+<!--Guess a color title-->
+<div class="container">
     <div class="row">
         <div class="col">
-            <h1>Stopwatch</h1>
+            <h1>Guess a color</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-11">
+            <h2 class="rgb-title">
+                RGB (?, ?, ?)
+            </h2>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Guess a color - Game rules</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        The RGB color model is an additive color model in which the red, green, and blue primary colors
+                        of light are added together in various ways to reproduce a broad array of colors.
+                        <br>
+                        <br>
+                        Your task is guess which color block has RGB shown in a title.
+                        <br>
+                        <br>
+                        Good luck! 🎉
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <button type="button" class="btn custom-button" data-bs-toggle="modal" data-bs-target="#exampleModal">?
+            </button>
+        </div>
+    </div>
+
+    <!-- Color Blocks-->
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn color-block">?</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn color-block">?</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn color-block">?</button>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <h1 id="stopwatch">00 : 00 : 00</h1>
+            <button type="button" class="btn color-block">?</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn color-block">?</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn color-block">?</button>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <button type="button" class="btn btn-lg custom-button stopwatch-button" id="stopwatch-start">Start</button>
-        </div>
-        <div class="col">
-            <button type="button" class="btn btn-lg custom-button stopwatch-button" id="stopwatch-stop">Stop</button>
-        </div>
-        <div class="col">
-            <button type="button" class="btn btn-lg custom-button stopwatch-button" id="stopwatch-reset">Reset</button>
+            <button type="button" class="btn btn-lg custom-button new-color">Start a game!</button>
         </div>
     </div>
 </div>
@@ -78,6 +125,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-<script src="stopWatch.js"></script>
+<script src="guessAColor.js"></script>
 </body>
 </html>

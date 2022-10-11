@@ -21,14 +21,6 @@ h3 {
     color: black;
 }
 
-.btn-lg {
-    width: 70%;
-}
-
-.btn-lg:hover {
-    background-color: #F79489;
-}
-
 .col {
     text-align: center;
     margin-bottom: 2%;
@@ -70,20 +62,64 @@ h3 {
     color: white;
 }
 
-.dice-button {
-    width: 30%;
-    height: 120%;
-    background-color: #F79489;
+.button-row {
+    margin-top: 3%
 }
 
-.dice-button:active, .dice-button:focus {
-    background-color: #F79489;
+/*Guess a color*/
+.rgb-title {
+    color: lightgray;
+    text-align: center;
 }
 
-.dice-button:hover {
+.color-block {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    font-weight: bold;
     background-color: #6c757d;
 }
 
-.button-row {
-    margin-top: 3%
+/*Buttons*/
+.main-button {
+    width: 200px;
+}
+
+.main-button.disabled {
+    background-color: #6c757d;
+}
+
+.dice-button,
+.new-color,
+.stopwatch-button {
+    width: 190px;
+}
+
+.custom-button {
+    color: lightgray;
+    background-color: coral;
+    font-weight: bold;
+}
+
+.custom-button:hover {
+    color: lightgray;
+}
+
+.btn.color-block:active,
+.btn.color-block:focus,
+.btn.custom-button:active,
+.btn.custom-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn.color-block:hover,
+.btn.custom-button:hover {
+    outline-style: solid;
+    outline-color: lightgray;
+    box-shadow: none;
+}
+
+.btn-lg:hover {
+    background-color: coral;
 }
