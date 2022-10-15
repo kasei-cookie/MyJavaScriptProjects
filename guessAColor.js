@@ -2,9 +2,18 @@
 
 const colorsArray = [{}, {}, {}, {}, {}, {}];
 let hasEventListeners;
+let rgbNumber;
+
+function handleClick(i, colorBlocks) {
+    if (i === rgbNumber) {
+        colorBlocks[i].textContent = `Correct!`;
+    } else {
+        colorBlocks[i].textContent = `Try again!`;
+    }
+}
 
 function theMain() {
-    document.querySelector(".new-color").innerText = `New colors!`;
+    document.querySelector(".new-color").textContent = `New colors!`;
 
     // Choosing random rgb for
     function color() {
@@ -19,7 +28,7 @@ function theMain() {
         colorsArray[i].g = color();
         colorsArray[i].b = color();
         colorBlocks[i].style.backgroundColor = `rgb(${colorsArray[i].r}, ${colorsArray[i].g}, ${colorsArray[i].b})`;
-        colorBlocks[i].innerText = `?`;
+        colorBlocks[i].textContent = `rgb(${colorsArray[i].r}, ${colorsArray[i].g}, ${colorsArray[i].b})`;
 
         const sum = colorsArray[i].r + colorsArray[i].g + colorsArray[i].b;
         if (sum < 382) {
@@ -30,24 +39,19 @@ function theMain() {
     }
 
     // Showing rgb in title
-    let rgbNumber = Math.trunc(Math.random() * 6);
-    document.querySelector(".rgb-title").innerHTML = `RGB (${colorsArray[rgbNumber].r}, ${colorsArray[rgbNumber].g}, ${colorsArray[rgbNumber].b})`
+    rgbNumber = Math.trunc(Math.random() * 6);
+    document.querySelector(".rgb-title").textContent = `RGB (${colorsArray[rgbNumber].r}, ${colorsArray[rgbNumber].g}, ${colorsArray[rgbNumber].b})`
 
 
     // Checking which color block was clicked
     if (!hasEventListeners) {
         for (let i = 0; i < colorsArray.length; i++) {
             colorBlocks[i].addEventListener("click", function () {
-                if (i === rgbNumber) {
-                    colorBlocks[i].innerHTML = `Correct!`;
-                } else {
-                    colorBlocks[i].innerHTML = `Try again!`;
-                }
+                handleClick(i, colorBlocks);
             })
         }
         hasEventListeners = true;
     }
-
 
 }
 
