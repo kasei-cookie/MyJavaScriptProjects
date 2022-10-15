@@ -28,7 +28,7 @@ function theMain() {
         colorsArray[i].g = color();
         colorsArray[i].b = color();
         colorBlocks[i].style.backgroundColor = `rgb(${colorsArray[i].r}, ${colorsArray[i].g}, ${colorsArray[i].b})`;
-        colorBlocks[i].textContent = `rgb(${colorsArray[i].r}, ${colorsArray[i].g}, ${colorsArray[i].b})`;
+        colorBlocks[i].textContent = `?`;
 
         const sum = colorsArray[i].r + colorsArray[i].g + colorsArray[i].b;
         if (sum < 382) {
